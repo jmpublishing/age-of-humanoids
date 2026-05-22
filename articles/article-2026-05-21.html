@@ -1,0 +1,164 @@
+I have everything I need from the SITE.md reference structure embedded in the prompt. I'll write the full article now.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inside the Humanoid Robot Supply Chain: Who Actually Makes These Things? | Age of Humanoids</title>
+  <meta name="description" content="Behind every humanoid robot demo is a supply chain of actuators, sensors, and compute. Understanding who makes what — and where the bottlenecks are — tells you more about humanoid timelines than any demo video.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="canonical" href="https://www.ageofhumanoids.com/articles/humanoid-robot-supply-chain.html">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Inside the Humanoid Robot Supply Chain: Who Actually Makes These Things?","author":{"@type":"Organization","name":"Age of Humanoids"},"publisher":{"@type":"Organization","name":"Age of Humanoids"},"datePublished":"2026-05-21"}
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <svg class="logo-icon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="17" cy="8" r="5" stroke="#00c8ff" stroke-width="1.8"/>
+          <rect x="11" y="14" width="12" height="10" rx="2" stroke="#00c8ff" stroke-width="1.8"/>
+          <line x1="8" y1="16" x2="5" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="26" y1="16" x2="29" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="14" y1="24" x2="12" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="20" y1="24" x2="22" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text"><span>Age of</span> Humanoids</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#articles" class="active">Robots</a>
+        <a href="../about.html">About</a>
+        <a href="../resources.html">Resources</a>
+        <a href="what-is-a-humanoid-robot.html" class="nav-cta">Start Here</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#x2630;</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="article-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a> <span>&rsaquo;</span> <a href="../index.html#articles">Articles</a> <span>&rsaquo;</span> Analysis
+      </div>
+      <div class="tag">Analysis</div>
+      <h1>Inside the Humanoid Robot Supply Chain: Who Actually Makes These Things?</h1>
+      <div class="article-meta">
+        <span>The Age of Humanoids Team</span>
+        <span>&bull;</span>
+        <span>May 21, 2026</span>
+        <span>&bull;</span>
+        <span>9 min read</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-container">
+    <div class="container">
+      <div class="article-layout">
+        <article class="article-body">
+
+          <p>The humanoid robot conversation tends to focus on the finished product: a bipedal machine walking across a stage, folding a shirt, or moving totes in a warehouse. What that framing omits is everything that had to exist before the demo — the motors, sensors, structural components, and compute hardware that make the robot a robot. Understanding the supply chain behind humanoid robotics is not a footnote to the industry story. In several respects, it is the story.</p>
+
+          <p>Production constraints, component sourcing decisions, and the geographic concentration of manufacturing capacity will shape how quickly humanoid robots can actually be built at scale — regardless of how impressive any given software or locomotion demonstration turns out to be. The gap between a working prototype and a thousand units shipping per month is largely a supply chain problem, not a software one.</p>
+
+          <h2>The Core Components</h2>
+
+          <p>A humanoid robot is, at its most mechanical level, a collection of joints that move, sensors that perceive, and compute hardware that decides. Each of those categories has its own supply chain dynamics.</p>
+
+          <p>The joints are driven by actuators — the motors and drive mechanisms that convert electrical signals into physical movement. Most humanoid robots today use one of two approaches: traditional electric motors combined with gearboxes, or newer designs using series elastic actuators (SEAs), which add a spring element between the motor and the joint to give the robot a more controlled, compliant feel when it contacts objects or surfaces. The compliance matters for safety when robots work near humans, and for dexterity when handling varied objects. High-performance actuators for humanoid applications are not commodity hardware. A small number of specialist manufacturers — many of them in China, South Korea, and to a lesser extent Germany and Japan — supply the market.</p>
+
+          <p>Sensors fall into several categories. Cameras are standard and widely available. Lidar units — sensors that map the robot's environment using laser pulses — are more specialised, though the cost has dropped substantially since the autonomous vehicle industry created volume demand. Force-torque sensors, which measure how much pressure a robot's joints or end effectors (the hands or tools at the end of a robotic arm) are applying, are more of a niche component critical for manipulation tasks. The ability to pick up an egg without crushing it requires accurate force feedback; the sensors that enable that are not made by dozens of competing manufacturers.</p>
+
+          <p>Compute hardware is where the supply chain intersects most visibly with broader geopolitical dynamics. Modern humanoid robots increasingly rely on onboard neural processing units — specialised chips designed for running the machine learning models that handle perception and decision-making. NVIDIA has become the dominant supplier of the GPU hardware used in robotics development; their Jetson platform is embedded in a significant portion of research and commercial humanoid systems. The broader chip supply chain, with its Taiwan concentration risk and ongoing export control complications, is a structural constraint on the entire robotics industry, not just humanoids.</p>
+
+          <h2>Where Things Are Actually Made</h2>
+
+          <p>The honest answer to "where are humanoid robots made?" is: China, more than the coverage of US and European robotics companies tends to acknowledge.</p>
+
+          <p>The precision gearboxes that most humanoid joints require — particularly harmonic drives and cycloidal gearboxes — are dominated by Japanese manufacturers (Harmonic Drive Systems, Nabtesco) and increasingly by Chinese producers who have invested heavily in this specific component category over the past decade. China's share of global harmonic drive production has grown substantially since 2020, and several Chinese humanoid companies — including Unitree, Fourier Intelligence, and UBTECH — manufacture their robots almost entirely with domestic components.</p>
+
+          <p>Western humanoid companies occupy a more complicated position. Firms like Figure AI, Apptronik, and 1X Technologies design their robots in the United States or Europe but source components globally. The extent to which any given company's supply chain is exposed to Chinese manufacturing is not always disclosed publicly — and given ongoing US-China trade tensions and export controls on advanced technology, it is a question that investors and prospective customers are beginning to ask more directly.</p>
+
+          <p>Tesla's Optimus programme represents the most visible attempt to vertically integrate humanoid manufacturing — designing and producing key components, including actuators, in-house rather than sourcing from external suppliers. The stated rationale is cost reduction and supply chain control; Tesla's experience manufacturing electric vehicle motors and battery packs at scale gives it a credible foundation for that ambition. Whether the in-house approach delivers cost and quality advantages over specialist suppliers remains to be seen, and the company has not published data that would allow an independent assessment.</p>
+
+          <h2>The Actuator Bottleneck</h2>
+
+          <p>If there is one component category that most directly constrains how quickly humanoid robotics can scale, it is actuators — specifically, the high-torque, low-backlash (meaning minimal slop or play in the joint) precision actuators that a human-scale robot needs to move smoothly and safely.</p>
+
+          <p>A humanoid robot with 30 to 40 degrees of freedom — meaning 30 to 40 independently controllable joints — requires 30 to 40 actuators. At current production volumes, the manufacturers of the specialised gearboxes those actuators rely on are not configured to supply millions of units per year. Harmonic Drive Systems, one of the leading suppliers, produces hundreds of thousands of units annually across all customers and applications. That is a constraint that cannot be resolved quickly; building out precision manufacturing capacity takes years and substantial capital investment.</p>
+
+          <p>This is why several humanoid companies are pursuing actuator designs that reduce or eliminate the need for traditional harmonic drives. Linear actuators, cable-driven mechanisms, and pneumatic designs all represent attempts to work around the bottleneck using components that are either more widely available or more amenable to in-house production. Each approach involves trade-offs in performance, weight, or complexity that are not yet fully resolved.</p>
+
+          <h2>What Scaling Actually Requires</h2>
+
+          <p>The supply chain picture matters most when evaluating claims about humanoid deployment timelines. When a company says it will have tens of thousands of units operating by a specific year, the implicit question is: where are the actuators coming from? Who is making the precision gearboxes? What is the yield rate on the custom compute hardware? How are battery cells being sourced, and what happens to robot unit economics if lithium prices move?</p>
+
+          <p>These are manufacturing and procurement questions, not software questions, and they are rarely addressed in the funding announcements and demo videos that dominate humanoid coverage. The companies with credible answers to them — either through supply chain relationships, vertical integration, or component designs that sidestep the bottlenecks — are better positioned to translate demonstrated capability into deployed units than those whose plans assume the supply chain will resolve itself.</p>
+
+          <p>Several analysts tracking the sector have noted that Chinese humanoid manufacturers have a structural advantage in this respect: proximity to the world's largest concentration of precision manufacturing, shorter logistics chains for key components, and domestic government support for robotics as a strategic industry. That advantage doesn't translate automatically into better robots, but it does translate into a clearer path from prototype to volume production than most Western competitors currently have.</p>
+
+          <h2>The Parts You Don't See</h2>
+
+          <p>There is a category of humanoid robot supply chain that rarely appears in coverage: the commodity components. Cable assemblies, printed circuit boards, structural aluminium and carbon fibre parts, connectors, fasteners, wiring harnesses — none of this is glamorous, and all of it needs to be sourced, kitted, and assembled at scale before a robot ships.</p>
+
+          <p>The firms that will build humanoid robots at meaningful volume will need manufacturing operations that look more like automotive assembly than like technology hardware production. That is a different kind of operational challenge than writing better locomotion algorithms, and it requires different expertise. The extent to which current humanoid companies have built those capabilities — or have credible plans to acquire them — is a reasonable proxy for which teams are thinking seriously about deployment rather than demonstration.</p>
+
+          <p>The robots getting the most attention right now are, in most cases, hand-assembled in relatively small numbers by engineering teams. The supply chains that would support volume production are, in most cases, works in progress. Watching how those supply chains develop over the next two to three years will tell you more about the trajectory of humanoid robotics than any individual demo video — however compelling the footage turns out to be.</p>
+
+        </article>
+
+        <aside class="article-sidebar">
+          <div class="sidebar-card">
+            <h3>Further Reading</h3>
+            <p>For a deeper look at how robotics hardware differs from consumer electronics manufacturing, <em>The Silicon Valley of Things</em> by Jon Gertner offers useful context on the gap between prototype and production.</p>
+            <p><a href="[AMAZON_AFFILIATE_LINK]" target="_blank" rel="noopener">Find it on Amazon &rarr;</a></p>
+            <p class="disclosure"><em>Disclosure: Age of Humanoids earns a commission if you purchase through this link. This does not shape our editorial coverage.</em></p>
+          </div>
+        </aside>
+      </div>
+    </article>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo">
+          <svg class="logo-icon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="17" cy="8" r="5" stroke="#00c8ff" stroke-width="1.8"/>
+            <rect x="11" y="14" width="12" height="10" rx="2" stroke="#00c8ff" stroke-width="1.8"/>
+            <line x1="8" y1="16" x2="5" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="26" y1="16" x2="29" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="14" y1="24" x2="12" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="20" y1="24" x2="22" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text"><span>Age of</span> Humanoids</span>
+        </a>
+        <p>Practical, grounded coverage of humanoid robotics — for people who want to understand what&rsquo;s actually happening.</p>
+      </div>
+      <div class="footer-nav">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../resources.html">Resources</a>
+        <a href="what-is-a-humanoid-robot.html">Start Here</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Age of Humanoids. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+```

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Standards, No Playbook: How Humanoid Robots Get Tested Before Deployment | Age of Humanoids</title>
+  <meta name="description" content="There is no agreed safety standard for humanoid robots in the workplace. Before a unit goes onto a factory floor, who decides it's safe — and how? The answer is messier than the industry tends to admit.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="canonical" href="https://www.ageofhumanoids.com/articles/article-2026-07-14.html">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"No Standards, No Playbook: How Humanoid Robots Get Tested Before Deployment","author":{"@type":"Organization","name":"Age of Humanoids"},"publisher":{"@type":"Organization","name":"Age of Humanoids"},"datePublished":"2026-07-14"}
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <svg class="logo-icon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="17" cy="8" r="5" stroke="#00c8ff" stroke-width="1.8"/>
+          <rect x="11" y="14" width="12" height="10" rx="2" stroke="#00c8ff" stroke-width="1.8"/>
+          <line x1="8" y1="16" x2="5" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="26" y1="16" x2="29" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="14" y1="24" x2="12" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="20" y1="24" x2="22" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text"><span>Age of</span> Humanoids</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#articles" class="active">Robots</a>
+        <a href="../about.html">About</a>
+        <a href="../resources.html">Resources</a>
+        <a href="what-is-a-humanoid-robot.html" class="nav-cta">Start Here</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#x2630;</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="article-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a> <span>&rsaquo;</span> <a href="../index.html#articles">Articles</a> <span>&rsaquo;</span> Analysis
+      </div>
+      <div class="tag">Analysis</div>
+      <h1>No Standards, No Playbook: How Humanoid Robots Get Tested Before Deployment</h1>
+      <div class="article-meta">
+        <span>The Age of Humanoids Team</span>
+        <span>&bull;</span>
+        <span>July 14, 2026</span>
+        <span>&bull;</span>
+        <span>9 min read</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-container">
+    <div class="container">
+      <div class="article-layout">
+        <article class="article-body">
+
+          <p>When a new industrial robot arm goes into a manufacturing facility, there is a reasonably well-understood process for validating that it is safe to operate. Industry standards &#8212; particularly ISO 10218, which covers industrial robot safety, and its companion specification ISO/TS 15066, which addresses collaborative robots working alongside humans &#8212; provide a shared framework for testing, risk assessment, and the documentation employers and insurers expect to see. The framework is imperfect and the application is often uneven. But it exists.</p>
+
+          <p>For humanoid robots, nothing equivalent exists yet. There is no agreed ISO standard for mobile bipedal robots operating in mixed human-robot environments. There is no accepted test methodology for validating the full range of failure modes specific to a machine that walks on two legs, makes semi-autonomous decisions, and operates within reach of human workers for extended periods. Companies deploying humanoids today are, to a substantial degree, making it up as they go &#8212; working from first principles, borrowing selectively from adjacent frameworks, and negotiating safety requirements directly with the facilities and insurers involved.</p>
+
+          <p>That situation is not unusual for a young technology. But it has real consequences for how deployment decisions get made, how risks get managed, and how the industry develops over the next few years. Understanding the gap between the safety assurance process as it is typically described in announcements and as it actually functions right now is worth the effort.</p>
+
+          <h2>What Existing Standards Actually Cover</h2>
+
+          <p>The ISO 10218 standard, first published in 2006 and revised in 2011, was written for industrial robot arms: fixed-base machines with defined workspaces, operating in physically separated zones or under close-range collaborative protocols. The standard defines requirements for robot design, protective measures, and the risk assessment process that operators must conduct before deployment. It has worked reasonably well for the type of robot it was designed for.</p>
+
+          <p>Collaborative robot standards, particularly ISO/TS 15066, extend this framework to robots designed to share workspace with humans. They define specific limits for contact force and pressure &#8212; essentially, how hard a robot can push against a person before the contact becomes likely to cause injury &#8212; and set requirements for speed-and-separation monitoring systems that slow or stop the robot when a human enters its working zone. These standards have been applied to a generation of smaller collaborative robot arms from manufacturers including Universal Robots, FANUC, and ABB.</p>
+
+          <p>Humanoid robots fit awkwardly into both frameworks. They are not fixed-base machines with defined workspaces. They move through environments, they change their configuration constantly as they walk and reach, and their risk profile shifts with each task and each location. Applying the force-and-pressure limits from ISO/TS 15066 to a 65-kilogram bipedal machine that can stumble, fall, or reach in unexpected directions is not straightforward. The existing standards were not designed with this configuration in mind, and stretching them to cover it requires interpretation that different organizations will make differently.</p>
+
+          <h2>How Companies Are Actually Approaching This</h2>
+
+          <p>In the absence of a humanoid-specific standard, manufacturers and their operator partners are using a combination of approaches. The picture that emerges from publicly available information &#8212; technical disclosures, patent filings, and statements from companies engaged in pilots &#8212; has a few consistent elements, though the details vary considerably.</p>
+
+          <p>Most manufacturers conduct extensive internal testing before offering units for external deployment. This typically includes laboratory testing of individual components &#8212; the actuators (motors and drives that power the robot's joints), sensors, and compute systems &#8212; followed by integration testing of the full assembled system, and then operational testing in controlled environments that simulate the intended deployment context. The scope and rigour of this testing is not publicly verified. Companies describe it in general terms; independent assessment of whether those descriptions correspond to what was actually done is not available.</p>
+
+          <p>For pilots in customer facilities, the typical approach involves staged introduction: the robot operates in a defined, bounded area with human observers present, the task scope is restricted to well-understood operations in predictable conditions, and human workers are kept at a distance from the robot's operating zone during initial phases. Over time, if performance is consistent and incidents are absent, the operational scope may be extended. This is a sensible pragmatic approach. It is also one that concentrates risk-assessment judgment in the hands of individual companies rather than distributing it across a validated framework that others can audit or challenge.</p>
+
+          <p>Some manufacturers are engaging directly with standards bodies to accelerate development of humanoid-specific frameworks. Agility Robotics, Boston Dynamics, and several European manufacturers have participated in working groups at ISO and at the Robotic Industries Association in the United States, which has historically played a role in translating ISO standards into American practice. Progress in standards development is slow by design &#8212; consensus-based processes that involve industry, government, and academic participants do not move quickly &#8212; and the technology is evolving faster than the standards process can track.</p>
+
+          <h2>The Failure Mode Problem</h2>
+
+          <p>One reason humanoid safety standards are hard to write is that the failure modes of a bipedal, semi-autonomous machine are more numerous and less predictable than those of a fixed industrial arm. A robot arm has a defined range of motion; its failure modes are largely a function of what happens within that envelope. A humanoid robot can fall, overshoot a reach, collide with a human while navigating, drop a held object, misidentify an obstacle, or make an autonomous decision that a human observer would immediately recognise as wrong.</p>
+
+          <p>Falls are the most discussed failure mode, and for good reason. A 65-kilogram machine falling from full standing height generates significant impact energy. Most current humanoids have fall-detection and fall-mitigation systems &#8212; they try to detect when a fall is imminent and adopt a protective posture that reduces impact force. But preventing falls in a production environment with variable surfaces, unexpected contact, and objects in the path is an unsolved problem that mitigation only partially addresses. The current approach in most deployments is to operate the robot slowly enough that the likelihood of an uncontrolled fall is low, and to restrict operation to surfaces assessed in advance. That works for pilots. It constrains what production deployment looks like.</p>
+
+          <p>Autonomous decision-making introduces a different category of failure that existing safety frameworks are poorly equipped to handle. A robot arm does what it is told; safety analysis focuses on whether the task it is told to do is safe. A semi-autonomous humanoid makes real-time decisions about navigation, grasp selection, and task sequencing. Those decisions can be wrong in ways that are difficult to anticipate and enumerate in advance. Validating the safety of a learned control policy &#8212; a system trained on data rather than explicitly programmed &#8212; requires evaluation methods that are still being developed. The field of machine learning safety is active and serious, but it has not yet produced validated methods for certifying learned robot behaviours to the standard that industrial deployment requires.</p>
+
+          <h2>What Operators Are Actually Requiring</h2>
+
+          <p>Large manufacturing and logistics companies conducting humanoid pilots are not waiting for formal standards to tell them what to require. They are writing their own requirements, drawing on their existing safety management systems and the expertise of their safety engineering teams. The requirements that emerge from this process vary, but several themes appear consistently.</p>
+
+          <p>Operators want documented risk assessments: formal analysis of what can go wrong, how likely each failure mode is, and what mitigations are in place. They want incident reporting mechanisms &#8212; clear processes for documenting near-misses and feeding that information back into risk management. They want the ability to override or stop the robot immediately from multiple locations in the facility. And they want clarity on liability when something goes wrong, which is as much a contractual question as a technical one.</p>
+
+          <p>What operators are less consistently requiring &#8212; because the tools for it do not fully exist &#8212; is independent third-party validation of a manufacturer's safety claims. In the automotive and aerospace industries, safety-critical systems routinely go through certification processes conducted by accredited third parties separate from the manufacturer. In humanoid robotics right now, the primary validation comes from the manufacturer's own testing and the operator's own assessment of that testing. Independent certification infrastructure does not yet exist for this product category, and building it requires a foundation of agreed standards that are not yet in place.</p>
+
+          <h2>The Insurance Question</h2>
+
+          <p>Insurers are paying close attention to humanoid deployment, and their engagement with the standards gap is shaping how pilots are being structured in ways that receive little coverage.</p>
+
+          <p>Industrial insurers covering facilities running humanoid pilots are, in most documented cases, requiring specific operational restrictions as a condition of coverage: minimum separation distances between robots and human workers during operation, restrictions on operating hours or task types, requirements for human supervision ratios, and in some cases limits on how many units can operate simultaneously. These requirements are negotiated case-by-case and are not public. But their effect is visible in the operational constraints that appear in pilot descriptions &#8212; the bounded zones, the supervised conditions, the limited task scope.</p>
+
+          <p>The insurance industry will, eventually, develop actuarial frameworks for humanoid robots as deployment data accumulates. Incident rates, injury severity distributions, and correlations between operational parameters and failure rates are exactly the kind of data insurers need, and they are starting to be collected through the current wave of pilots. That data will, over time, inform both insurance products and the standards development process. But the timeline for that feedback loop to produce meaningful outputs is measured in years, not months.</p>
+
+          <h2>Where This Leaves the Industry</h2>
+
+          <p>The absence of agreed standards is not, by itself, a reason to conclude that current humanoid deployments are unsafe. The companies conducting pilots are, by all available evidence, taking the safety questions seriously, and the caution visible in how those pilots are structured reflects genuine awareness of the risks. A small number of units, operating narrow tasks, in bounded areas, under human supervision, represents a reasonable starting point for accumulating the operational experience that better frameworks will eventually require.</p>
+
+          <p>The problem comes at scale. The pragmatic, case-by-case approach that works for a handful of carefully managed pilots does not scale to a market with dozens of manufacturers, thousands of operator facilities, and workers who have a legitimate interest in the safety of machines working next to them being independently validated rather than self-certified. At some point &#8212; the industry is not there yet &#8212; the absence of a shared framework becomes a constraint on deployment, not just a bureaucratic gap.</p>
+
+          <p>Standards development for a technology that is still changing rapidly is genuinely difficult. Writing requirements for a humanoid robot in 2026 risks encoding assumptions that the 2028 generation of hardware will have already made obsolete. The standards bodies working on this are aware of the tension between moving fast enough to be useful and moving carefully enough to get the framework right. The outcome of that work will shape, more than most deployment announcements, what the next phase of humanoid robotics in the workplace actually looks like.</p>
+
+        </article>
+
+        <aside class="article-sidebar">
+          <div class="sidebar-card">
+            <h3>More Analysis</h3>
+            <ul>
+              <li><a href="article-2026-06-26.html">Who Is Liable When a Humanoid Robot Causes Harm?</a></li>
+              <li><a href="article-2026-07-10.html">The Speed Problem: Why Humanoid Robots Move the Way They Do</a></li>
+              <li><a href="article-2026-05-15.html">Humanoid Robots and the Worker Question: What the Research Actually Says</a></li>
+              <li><a href="article-2026-06-09.html">The Software Stack Inside a Humanoid Robot</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo">
+          <svg class="logo-icon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="17" cy="8" r="5" stroke="#00c8ff" stroke-width="1.8"/>
+            <rect x="11" y="14" width="12" height="10" rx="2" stroke="#00c8ff" stroke-width="1.8"/>
+            <line x1="8" y1="16" x2="5" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="26" y1="16" x2="29" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="14" y1="24" x2="12" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="20" y1="24" x2="22" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text"><span>Age of</span> Humanoids</span>
+        </a>
+        <p>Practical, grounded coverage of humanoid robotics &#8212; for people who want to understand what&#8217;s actually happening.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../about.html">About</a>
+        <a href="../resources.html">Resources</a>
+        <a href="../index.html#articles">Articles</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Age of Humanoids. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const siteNav = document.querySelector('.site-nav');
+  if (menuToggle && siteNav) {
+    menuToggle.addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+      siteNav.classList.toggle('nav-open');
+    });
+  }
+</script>
+
+</body>
+</html>

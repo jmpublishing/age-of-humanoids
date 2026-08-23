@@ -1,0 +1,179 @@
+The file write tool isn't available in this sandbox config, but the article is complete and ready. Here it is in full:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Humanoid Robots Can Actually See: Perception, Sensors, and the Gap Between Vision and Understanding | Age of Humanoids</title>
+  <meta name="description" content="Cameras and lidar give humanoid robots data. Turning that data into reliable understanding of the world is a different, harder problem — and it's one of the main limits on what today's robots can actually do.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="canonical" href="https://www.ageofhumanoids.com/articles/humanoid-robot-perception-sensors.html">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"What Humanoid Robots Can Actually See: Perception, Sensors, and the Gap Between Vision and Understanding","author":{"@type":"Organization","name":"Age of Humanoids"},"publisher":{"@type":"Organization","name":"Age of Humanoids"},"datePublished":"2026-05-29"}
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <svg class="logo-icon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="17" cy="8" r="5" stroke="#00c8ff" stroke-width="1.8"/>
+          <rect x="11" y="14" width="12" height="10" rx="2" stroke="#00c8ff" stroke-width="1.8"/>
+          <line x1="8" y1="16" x2="5" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="26" y1="16" x2="29" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="14" y1="24" x2="12" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="20" y1="24" x2="22" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text"><span>Age of</span> Humanoids</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#articles" class="active">Robots</a>
+        <a href="../about.html">About</a>
+        <a href="../resources.html">Resources</a>
+        <a href="what-is-a-humanoid-robot.html" class="nav-cta">Start Here</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#x2630;</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="article-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a> <span>&rsaquo;</span> <a href="../index.html#articles">Articles</a> <span>&rsaquo;</span> Explainer
+      </div>
+      <div class="tag">Explainer</div>
+      <h1>What Humanoid Robots Can Actually See: Perception, Sensors, and the Gap Between Vision and Understanding</h1>
+      <div class="article-meta">
+        <span>The Age of Humanoids Team</span>
+        <span>&bull;</span>
+        <span>May 29, 2026</span>
+        <span>&bull;</span>
+        <span>9 min read</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-container">
+    <div class="container">
+      <div class="article-layout">
+        <article class="article-body">
+
+          <p>Watch a humanoid robot navigate a room and it looks, at a glance, like the robot understands what it's looking at. It avoids the chair. It picks up the box. It doesn't walk into the wall. The impression is of something seeing the world the way we do.</p>
+
+          <p>That impression is misleading — not because the underlying technology is fake, but because perception in robotics is a fundamentally different problem than perception in humans, and the gap between the two is where most of the real difficulty in deploying humanoid robots actually lives.</p>
+
+          <p>Understanding what robots can and can't perceive is one of the more useful frameworks for cutting through the noise around humanoid demonstrations. A robot that can identify a specific object under controlled lighting conditions is doing something genuinely useful. That same robot encountering an unfamiliar object in poor light, at an angle it hasn't seen before, in a cluttered environment — is likely doing something much less reliable.</p>
+
+          <h2>The Sensor Stack</h2>
+
+          <p>Modern humanoid robots use several different sensing technologies, often in combination. Each captures different information about the world, and each has characteristic failure modes.</p>
+
+          <p><strong>Cameras</strong> are the most common primary sensor. RGB cameras — the kind that produce conventional colour images — give a robot the same visual information a photograph would. Stereo cameras, which use two lenses separated by a fixed distance (like human eyes), allow depth estimation through triangulation: the slight difference between what each camera sees encodes distance information. Most commercial humanoid platforms use at least one stereo camera pair, and many use multiple cameras covering different parts of the robot's field of view.</p>
+
+          <p><strong>Lidar</strong> — Light Detection and Ranging — works by emitting laser pulses and measuring how long they take to return. The result is a detailed three-dimensional point cloud of the robot's surroundings, accurate to a few centimetres at useful ranges. Lidar is particularly good at generating precise spatial maps and is relatively robust to lighting conditions. It is expensive, adds weight, and captures geometry rather than appearance — a lidar scan tells you where surfaces are, not what they look like or what they are.</p>
+
+          <p><strong>Depth cameras</strong> combine some advantages of both: they produce images with depth information encoded per-pixel, typically using infrared structured light or time-of-flight sensing. They are cheaper and more compact than lidar but less precise at range and less effective in outdoor environments or under direct sunlight.</p>
+
+          <p><strong>Inertial measurement units</strong> (IMUs) — sensors that measure acceleration and angular velocity — give the robot information about its own body position and movement. This is essential for balance and for understanding how the robot itself is moving through space, but contributes nothing to understanding the external environment.</p>
+
+          <p><strong>Force and torque sensors</strong> in the robot's hands and joints provide tactile feedback — information about how hard the robot is gripping, whether contact has been made, whether an object is slipping. This kind of sensor is what allows a robot to adjust grip pressure when handling fragile or irregular objects, rather than crushing or dropping them.</p>
+
+          <h2>What Sensors Actually Produce</h2>
+
+          <p>Here is the critical distinction: sensors produce data. What a robot does with that data is a separate, harder problem.</p>
+
+          <p>A camera produces millions of pixel values per second. Turning those pixels into a useful representation of the world — identifying objects, understanding spatial relationships, recognising when something unexpected has entered the scene — requires perception software that can be brittle in ways that the raw hardware capability doesn't suggest.</p>
+
+          <p>Computer vision systems trained on large datasets can identify objects in images with high accuracy under conditions similar to their training data. The same system encountering conditions outside that training distribution — unusual lighting, unfamiliar object configurations, objects partially occluded by other things — can fail in ways that are hard to predict and harder to diagnose. Unlike a human who can reason about what they're probably looking at even when the view is partially blocked, a vision model that hasn't seen that pattern before may simply produce a wrong or uncertain answer.</p>
+
+          <p>This is the crux of the perception problem in robotics: the world in deployment is always broader than the world in training. Warehouses, factories, and homes contain endless variation — objects in unexpected positions, surfaces with unfamiliar textures, lighting that shifts as the day progresses, new objects that weren't there yesterday. Each variation is, in principle, a potential failure point for a perception system that hasn't been trained to handle it.</p>
+
+          <h2>The Semantic Gap</h2>
+
+          <p>Beyond object identification, there's a harder category of perception problem: understanding the meaning of what the robot is seeing. Researchers sometimes call this the semantic gap — the distance between raw sensory data and the kind of scene understanding that humans take for granted.</p>
+
+          <p>A human walking into a cluttered kitchen can, at a glance, identify which objects are relevant to a given task, which are fragile, which are in the way, and what the rough sequence of actions needed to accomplish something probably looks like. This isn't just object recognition — it's contextual understanding, informed by years of experience with how kitchens work, how objects behave physically, and what the goal of the task implies about the environment.</p>
+
+          <p>Current humanoid robots can handle constrained versions of this problem well. In structured environments where the range of objects, positions, and tasks has been carefully specified in advance, a capable perception and planning system can produce reliable behaviour. The Agility Robotics Digit deployment at Amazon works, in part, because the task is narrow: move a specific type of container between specific locations in a relatively controlled setting. The perception system doesn't need general scene understanding — it needs to reliably identify one type of object in a familiar environment.</p>
+
+          <p>Generalising that to open-ended environments is where the current state of the art runs into difficulty. Vision-language-action models — systems that combine visual perception, language understanding, and motion planning in a single neural architecture — represent the most promising current approach to bridging the semantic gap. Researchers at Google DeepMind, Physical Intelligence, and several university labs have demonstrated systems that can follow open-ended language instructions in varied physical environments. But the reliability and robustness of these systems outside controlled demonstration conditions remains an open research question, not a solved engineering problem.</p>
+
+          <h2>Lighting, Occlusion, and the Real World</h2>
+
+          <p>Two practical failure modes are worth noting because they come up repeatedly in real deployments and are often underweighted in demonstrations.</p>
+
+          <p>Lighting conditions affect camera-based perception significantly. Industrial facilities, warehouses, and homes all have variable lighting — windows that change the light quality through the day, artificial lighting that creates harsh shadows, reflective surfaces that produce glare. Perception systems developed and evaluated under consistent lighting conditions can degrade substantially in variable ones. Lidar is relatively immune to this; camera-based systems are not.</p>
+
+          <p>Occlusion — one object blocking the view of another — is a fundamental challenge for any perception system that relies on visual data. Humans handle occlusion partly by using context (if I can see the handle, the cup is probably attached to it) and partly by moving to get a better view. Robots need both capabilities: the contextual reasoning to make good inferences from partial information, and the action planning to reposition when uncertainty is too high to act safely. Both are active research areas.</p>
+
+          <h2>The Honest Picture</h2>
+
+          <p>Robot perception is genuinely impressive today compared to where it was a decade ago. The combination of better sensors, larger training datasets, and more capable neural architectures has produced systems that can perform reliably in structured environments in ways that weren't feasible in 2015. That progress is real.</p>
+
+          <p>What hasn't been solved is the reliability and robustness problem in unstructured, variable, real-world conditions. The demonstrations that make it onto company websites are produced under conditions optimised for success — familiar environments, controlled lighting, pre-selected objects. The deployments that matter commercially will involve none of those optimisations.</p>
+
+          <p>The trajectory matters as much as the current state. Perception capabilities are improving, and the gap between controlled demonstration and real deployment is narrowing. But anyone following humanoid robotics should treat perception as one of the core engineering challenges that will shape the pace and scope of deployment — not a solved problem riding along quietly while the rest of the industry races ahead.</p>
+
+          <p>The question worth watching is not whether a robot can see. It's whether it understands what it's looking at well enough to act reliably when the world doesn't cooperate.</p>
+
+        </article>
+
+        <aside class="article-sidebar">
+          <div class="sidebar-section">
+            <h3>On This Site</h3>
+            <ul>
+              <li><a href="what-is-a-humanoid-robot.html">What Is a Humanoid Robot?</a></li>
+              <li><a href="article-hand-problem.html">The Hand Problem</a></li>
+              <li><a href="article-2026-05-08.html">How Humanoid Robots Actually Learn</a></li>
+              <li><a href="article-2026-05-21.html">Inside the Humanoid Robot Supply Chain</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo">
+          <svg class="logo-icon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="17" cy="8" r="5" stroke="#00c8ff" stroke-width="1.8"/>
+            <rect x="11" y="14" width="12" height="10" rx="2" stroke="#00c8ff" stroke-width="1.8"/>
+            <line x1="8" y1="16" x2="5" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="26" y1="16" x2="29" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="14" y1="24" x2="12" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="20" y1="24" x2="22" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text"><span>Age of</span> Humanoids</span>
+        </a>
+        <p class="footer-tagline">Practical, grounded coverage of humanoid robotics.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../resources.html">Resources</a>
+        <a href="what-is-a-humanoid-robot.html">Start Here</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Age of Humanoids. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+```
+
+**Filename:** `humanoid-robot-perception-sensors.html`
+**Topic:** What humanoid robots can actually perceive — sensors (cameras, lidar, depth cameras, IMUs, force/torque), the data-vs-understanding gap, the semantic gap, occlusion and lighting failure modes, and an honest assessment of where perception capability actually stands.

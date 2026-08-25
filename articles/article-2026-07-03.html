@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Humanoid Robots Still Can't Clean Your House | Age of Humanoids</title>
+  <meta name="description" content="Every few months a new demo shows a humanoid robot tidying a kitchen or folding laundry. Here's why the home remains the hardest environment humanoid robotics has ever faced — and what would actually need to change.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="canonical" href="https://www.ageofhumanoids.com/articles/article-2026-07-03.html">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Why Humanoid Robots Still Can't Clean Your House","author":{"@type":"Organization","name":"Age of Humanoids"},"publisher":{"@type":"Organization","name":"Age of Humanoids"},"datePublished":"2026-07-03"}
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <svg class="logo-icon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="17" cy="8" r="5" stroke="#00c8ff" stroke-width="1.8"/>
+          <rect x="11" y="14" width="12" height="10" rx="2" stroke="#00c8ff" stroke-width="1.8"/>
+          <line x1="8" y1="16" x2="5" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="26" y1="16" x2="29" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="14" y1="24" x2="12" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="20" y1="24" x2="22" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text"><span>Age of</span> Humanoids</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#articles" class="active">Robots</a>
+        <a href="../about.html">About</a>
+        <a href="../resources.html">Resources</a>
+        <a href="what-is-a-humanoid-robot.html" class="nav-cta">Start Here</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#x2630;</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="article-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a> <span>&rsaquo;</span> <a href="../index.html#articles">Articles</a> <span>&rsaquo;</span> Analysis
+      </div>
+      <div class="tag">Analysis</div>
+      <h1>Why Humanoid Robots Still Can&#x27;t Clean Your House</h1>
+      <div class="article-meta">
+        <span>The Age of Humanoids Team</span>
+        <span>&bull;</span>
+        <span>July 3, 2026</span>
+        <span>&bull;</span>
+        <span>8 min read</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-container">
+    <div class="container">
+      <div class="article-layout">
+        <article class="article-body">
+
+          <p>In 1956, at the dawn of the field now called artificial intelligence, researchers at the Dartmouth Conference listed &ldquo;making a machine that can do household chores&rdquo; as one of the tractable near-term problems. Seventy years later, a robot that can reliably load a dishwasher, fold laundry, and wipe down a counter in an ordinary home remains commercially unavailable. Demonstrations exist. Prototypes exist. Products do not &mdash; not ones that work on anyone&rsquo;s actual dishes, in anyone&rsquo;s actual kitchen, without careful staging and significant human help.</p>
+
+          <p>The household robot question has become something of a running joke among robotics researchers: the task is harder than going to the moon, they say, because at least the moon doesn&rsquo;t move your things around. That joke has more technical content than it appears to. Understanding why the home is so difficult for humanoid robots is one of the most useful lenses for understanding where the field actually is &mdash; and what work remains to be done before the promises companies are making to consumers have any chance of being kept.</p>
+
+          <h2>The Problem with Every Home Being Different</h2>
+
+          <p>A warehouse has a controlled environment. The floor is flat, the lighting is consistent, the objects that need to be moved are standardised. The robot is trained on that environment specifically, and the operator adjusts the environment to suit the robot as much as adjusting the robot to suit the environment. This is not a small advantage &mdash; it is the foundation on which every commercial humanoid deployment so far has been built.</p>
+
+          <p>A home is the opposite of this. Every home has a different floor plan. Furniture arrangements change. Clutter varies by day, by room, by household. Objects are not standardised &mdash; a &ldquo;mug&rdquo; in one kitchen is a delicate hand-thrown ceramic; in another it is a thick-walled travel tumbler with a lid and a rubber grip. The lighting changes with the time of day and the season. Children and pets introduce unpredictable moving obstacles. Wet floors, narrow doorways, rugs that slide, stairs with irregular tread heights &mdash; any one of these is a manageable edge case; all of them together, in an environment the robot has never seen before, is a different problem entirely.</p>
+
+          <p>Robotics researchers call this the &ldquo;unstructured environment problem,&rdquo; and it is genuinely one of the hardest open problems in the field. Commercial deployments have succeeded precisely by avoiding it: constrained tasks, controlled settings, carefully limited edge cases. The home is, essentially, a maximally unstructured environment by the standards of what current systems handle well.</p>
+
+          <h2>What the Demos Are Actually Showing</h2>
+
+          <p>Several humanoid companies have released videos of robots performing domestic tasks in the past two years. Figure AI, 1X Technologies, and Sanctuary AI have all shown demos of robots handling objects in kitchen-like settings, folding garments, or loading items into dishwashers. These videos are technically real &mdash; the robots are performing the tasks shown &mdash; and they represent genuine progress in dexterous manipulation and task-following.</p>
+
+          <p>They are also, almost universally, staged in ways that matter for interpreting what they actually demonstrate.</p>
+
+          <p>The environments in these demos are clean, well-lit, and carefully arranged. The objects are positioned to give the robot an optimal grasp angle. The tasks are often repeated many times to capture a successful run, with the edited video showing the best attempt. The robot is typically operating on a task it has been extensively trained for in that specific setting &mdash; not navigating an unfamiliar home and deciding autonomously what needs to be done.</p>
+
+          <p>None of this means the demos are fraudulent. It means they show what a robot can do under conditions specifically designed to maximise success, which is a different thing from what a robot can do in your home. The gap between those two things is, right now, very large. Acknowledging that gap is not pessimism about the technology&rsquo;s eventual potential; it is accuracy about its current state.</p>
+
+          <h2>The Laundry Problem as a Case Study</h2>
+
+          <p>Laundry folding has become a useful benchmark for domestic robot capability, partly because it appears in so many demos and partly because it captures several of the hardest problems in dexterous manipulation simultaneously.</p>
+
+          <p>A garment pulled from a dryer is a deformable object &mdash; one whose shape is not fixed and changes unpredictably as it is handled. Identifying the orientation of a crumpled shirt, finding its collar, shaking it out, aligning it for a fold, and executing the fold consistently requires the robot to reason about a three-dimensional shape that it has never seen in exactly this configuration before. The grasping strategy that works for the shoulder seam of a t-shirt does not work for a pair of jeans or a fitted sheet.</p>
+
+          <p>Research groups have been working on this specific problem for well over a decade. Columbia&rsquo;s robotics lab, MIT&rsquo;s CSAIL, and several others have published substantial work on cloth manipulation. Progress has been real &mdash; the algorithms that handle deformable objects today are considerably better than they were five years ago. Commercial deployability is still a different question. The systems that work in research settings require careful setup, controlled lighting, and objects drawn from a limited set of garment types. A full laundry basket from an ordinary household, under ordinary conditions, remains at or beyond the edge of reliable autonomous operation.</p>
+
+          <h2>Task Understanding vs. Task Execution</h2>
+
+          <p>A domestic robot needs two things that are each hard in isolation and harder together: it needs to understand what tasks need doing, and it needs to execute them reliably.</p>
+
+          <p>Large language models and vision-language models &mdash; AI systems that can process images and text together &mdash; have substantially improved the task understanding side of this equation. A robot equipped with a good vision-language model can look at a kitchen counter and identify that there are dishes to be loaded, a spill to be wiped, and a knife that needs to be put away safely. That kind of scene understanding, which was essentially impossible five years ago, is now feasible.</p>
+
+          <p>The execution side has not kept pace. Understanding that a spill needs to be wiped is a different capability from physically wiping it &mdash; knowing where to find a cloth, applying the right pressure, handling the cloth when it becomes saturated, and disposing of it appropriately. Each step in that chain is a manipulation problem. Some steps, like picking up a dry cloth from a known location, are within current capability. Others, like managing a wet cloth that is now heavier and differently textured, push against the limits of current dexterous manipulation systems.</p>
+
+          <p>The gap between task understanding and reliable task execution is the central challenge for domestic humanoid robotics right now. The models that make robots seem more intelligent at interpreting instructions do not automatically make the physical execution more reliable. The two capabilities are developed largely separately and integrated with difficulty.</p>
+
+          <h2>Who Is Actually Working on This</h2>
+
+          <p>The companies closest to a genuine domestic product are, perhaps counterintuitively, not the ones receiving the most coverage.</p>
+
+          <p>1X Technologies, a Norwegian company backed by OpenAI, has been more explicit than most about targeting home environments. Their NEO robot is designed specifically for domestic use, and the company has published more candid assessments of current home deployment limitations than most competitors. Their stated approach &mdash; using teleoperation data from human operators to build training sets for autonomous operation &mdash; is technically credible, though the data requirements for generalised home capability at sufficient reliability are substantial.</p>
+
+          <p>Physical Intelligence (pi), a San Francisco startup that raised $400 million in late 2024, is focused specifically on the software layer that enables robots to perform a wide range of physical tasks. Their work on generalised policy models &mdash; systems that can handle multiple different tasks without being trained on each one individually &mdash; is among the most relevant research for the domestic use case. The company is notably focused on software rather than hardware, which reflects a reasonable read of where the hardest bottlenecks actually are.</p>
+
+          <p>Samsung and LG have both announced humanoid or semi-humanoid home robot programmes. Given that both companies manufacture both the robots and the home appliances those robots would interact with, the potential for co-designed systems &mdash; where the dishwasher is designed to be loaded by a robot and the robot is designed to load that specific dishwasher &mdash; is real. Whether that approach produces a genuinely useful product in a five-year window is uncertain, but the strategy is more coherent than trying to make a general-purpose robot that works with arbitrary appliances designed for human hands.</p>
+
+          <h2>The Safety Question Is Different at Home</h2>
+
+          <p>Industrial and warehouse deployments of humanoid robots happen in environments that can be structured around the robot&rsquo;s limitations. Workers can be briefed on where not to stand. Operating zones can be marked. Edge cases can be reduced through environmental design.</p>
+
+          <p>A home cannot be structured this way, and the people sharing space with a domestic robot are not briefed workers. They are children, elderly relatives, pets, and guests who have no relationship with the robot at all. The safety requirements for a robot operating in this context are fundamentally different from those for a supervised warehouse deployment &mdash; and the consequences if something goes wrong are potentially much more significant.</p>
+
+          <p>Most current humanoid platforms are not certified or tested to standards that domestic deployment would require. The ISO standards that apply to collaborative industrial robots provide some relevant precedent, but they were written for manufacturing environments, not homes. What a suitable safety standard for a domestic humanoid should look like is an open regulatory question in every major market, and it is unlikely to be resolved before commercial products appear &mdash; which means early adopters will be operating in a framework that does not yet fully account for the risk.</p>
+
+          <h2>What Would Actually Change Things</h2>
+
+          <p>The honest answer to &ldquo;when will domestic humanoid robots work?&rdquo; depends on several things happening in parallel, each of which is uncertain. Manipulation capabilities need to improve substantially, particularly for deformable and wet objects. Generalised task policies need to become reliable enough to handle the long tail of edge cases that any real home will produce. Costs need to fall to consumer price points &mdash; which means hardware manufacturing at volumes that do not currently exist. And safety frameworks need to be developed and adopted before mass-market deployment can proceed responsibly.</p>
+
+          <p>None of those things are impossible. Several have plausible development trajectories. The manipulation problem is being worked on seriously by many capable research groups and well-funded startups. Hardware costs for humanoid platforms have been falling, though current commercial prices remain one to two orders of magnitude above what consumer deployment would require.</p>
+
+          <p>The timing estimates that circulate in the industry &mdash; domestic robots by 2028, home humanoids within five years &mdash; deserve the same scrutiny as any prediction made by people with a financial interest in the timeline being true. The technology is advancing. The gap between current capability and reliable, general-purpose domestic operation is real and large. Both things are worth holding simultaneously, because the field has a long history of confident timelines followed by extended periods of actual work.</p>
+
+        </article>
+
+        <aside class="article-sidebar">
+          <div class="sidebar-widget">
+            <h3>More Analysis</h3>
+            <ul>
+              <li><a href="article-2026-05-22.html">The Hand Problem: Why Grasping Is Still Humanoid Robotics&rsquo; Hardest Challenge</a></li>
+              <li><a href="article-2026-05-29.html">What Humanoid Robots Can Actually See</a></li>
+              <li><a href="article-2026-06-09.html">The Software Stack Inside a Humanoid Robot</a></li>
+              <li><a href="article-2026-05-08.html">How Humanoid Robots Actually Learn</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo">
+          <svg class="logo-icon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="17" cy="8" r="5" stroke="#00c8ff" stroke-width="1.8"/>
+            <rect x="11" y="14" width="12" height="10" rx="2" stroke="#00c8ff" stroke-width="1.8"/>
+            <line x1="8" y1="16" x2="5" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="26" y1="16" x2="29" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="14" y1="24" x2="12" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="20" y1="24" x2="22" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text"><span>Age of</span> Humanoids</span>
+        </a>
+        <p>Practical, grounded coverage of humanoid robotics &mdash; for people who want to understand what&rsquo;s actually happening.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../about.html">About</a>
+        <a href="../resources.html">Resources</a>
+        <a href="../index.html#articles">Articles</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Age of Humanoids. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const siteNav = document.querySelector('.site-nav');
+  if (menuToggle && siteNav) {
+    menuToggle.addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+      siteNav.classList.toggle('nav-open');
+    });
+  }
+</script>
+
+</body>
+</html>

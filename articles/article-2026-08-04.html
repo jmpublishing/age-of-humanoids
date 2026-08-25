@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Regulatory Gap: What Rules Actually Govern Where Humanoid Robots Can Work | Age of Humanoids</title>
+  <meta name="description" content="Humanoid robots are being deployed in warehouses and factories, but the regulatory frameworks governing their use are largely borrowed from industrial machinery law written before bipedal robots existed. Here's what the rules actually say — and where they say nothing at all.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="canonical" href="https://www.ageofhumanoids.com/articles/article-2026-08-04.html">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"The Regulatory Gap: What Rules Actually Govern Where Humanoid Robots Can Work","author":{"@type":"Organization","name":"Age of Humanoids"},"publisher":{"@type":"Organization","name":"Age of Humanoids"},"datePublished":"2026-08-04"}
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <svg class="logo-icon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="17" cy="8" r="5" stroke="#00c8ff" stroke-width="1.8"/>
+          <rect x="11" y="14" width="12" height="10" rx="2" stroke="#00c8ff" stroke-width="1.8"/>
+          <line x1="8" y1="16" x2="5" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="26" y1="16" x2="29" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="14" y1="24" x2="12" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="20" y1="24" x2="22" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text"><span>Age of</span> Humanoids</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#articles" class="active">Robots</a>
+        <a href="../about.html">About</a>
+        <a href="../resources.html">Resources</a>
+        <a href="what-is-a-humanoid-robot.html" class="nav-cta">Start Here</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#x2630;</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="article-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a> <span>&rsaquo;</span> <a href="../index.html#articles">Articles</a> <span>&rsaquo;</span> Analysis
+      </div>
+      <div class="tag">Analysis</div>
+      <h1>The Regulatory Gap: What Rules Actually Govern Where Humanoid Robots Can Work</h1>
+      <div class="article-meta">
+        <span>The Age of Humanoids Team</span>
+        <span>&bull;</span>
+        <span>August 4, 2026</span>
+        <span>&bull;</span>
+        <span>9 min read</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-container">
+    <div class="container">
+      <div class="article-layout">
+        <article class="article-body">
+
+          <p>When a humanoid robot operates alongside human workers in a warehouse, something straightforward is happening: a machine is doing work. Something less straightforward is also happening: nobody has written a specific rule about whether it should be allowed to do that, under what conditions, and who is responsible when something goes wrong. The regulations that govern humanoid robot deployment today were not written with humanoid robots in mind. They were written for industrial machinery that stayed in one place, for collaborative robots that operated at low speeds with force limits, and for automated guided vehicles that followed fixed paths. A bipedal robot that can open doors, navigate staircases, and adapt to unstructured environments doesn&rsquo;t fit cleanly into any of those categories.</p>
+
+          <p>This is not a crisis &mdash; the deployments currently operating are doing so under regulatory frameworks that provide real guidance, even if the fit is imperfect. But as deployments scale and humanoid robots move into more varied environments, the gap between what the regulations cover and what the technology actually does is going to become more consequential. Understanding what the current rules actually say, and where they say nothing at all, is worth doing now rather than after an incident forces the question.</p>
+
+          <h2>The OSHA Framework and Its Limits</h2>
+
+          <p>In the United States, workplace safety for industrial robots falls primarily under the Occupational Safety and Health Administration. OSHA&rsquo;s general-duty clause requires employers to provide a workplace free from recognised hazards likely to cause death or serious physical harm &mdash; and this applies to robot-related hazards as much as any other. But OSHA has no regulations specific to humanoid robots, and its existing robot-related guidance is structured around earlier generations of the technology.</p>
+
+          <p>The most relevant OSHA framework for current deployments is the guidance developed for collaborative robots, sometimes called cobots &mdash; systems designed to work in close proximity to humans rather than behind protective barriers. Collaborative robot safety in the United States largely follows standards developed by the Robotic Industries Association, now part of the Association for Advancing Automation, which are incorporated by reference into OSHA compliance expectations. The most widely applied standard is ISO 10218, developed by the International Organization for Standardization, and its complementary technical specification ISO/TS 15066, which deals specifically with human-robot collaboration and sets out requirements for speed, force limits, and safety monitoring.</p>
+
+          <p>These standards define four collaborative operating modes: safety-rated monitored stop (the robot stops when a human enters its space), hand guiding (a human physically guides the robot), speed and separation monitoring (the robot slows as humans approach), and power and force limiting (the robot is built to exert only forces below injury thresholds). For a fixed-base collaborative robot arm operating at a workstation, these modes map reasonably well to the physical setup. For a mobile bipedal robot that is navigating shared spaces, interacting with varying objects, and occasionally working in direct proximity to humans, the mapping is considerably messier. A humanoid robot walking through a warehouse aisle does not have a clearly defined workspace perimeter the way a fixed-arm cobot does, and applying separation monitoring to a system that can move in any direction requires a substantially more complex safety envelope than the standards were designed to specify.</p>
+
+          <h2>What Standards Actually Exist for Mobile Robots</h2>
+
+          <p>Mobile robot safety is addressed by a different set of standards than those for fixed-arm industrial robots. ISO 3691-4 covers industrial trucks, including automated guided vehicles, and has been the baseline for wheeled warehouse automation. ISO 22166, a newer standard specifically addressing mobile service robots, was published in stages starting in 2021 and attempts to address robots that navigate autonomously in environments shared with people. Neither was written with bipedal robots in mind, but ISO 22166 is the closest thing to an applicable framework for humanoid systems operating in non-industrial settings.</p>
+
+          <p>The practical challenge with applying these standards to humanoids is the combination of mobility and manipulation. A wheeled mobile robot that navigates a corridor is covered reasonably well by guidance on autonomous navigation and collision avoidance. A humanoid robot that navigates the same corridor and then reaches out to pick up an object from a shelf introduces a second hazard domain &mdash; the robot arm and gripper interacting with the environment and potentially with people nearby &mdash; that requires drawing on both mobile robot and manipulator standards simultaneously. How those two frameworks interact, and which takes precedence in a given scenario, is not clearly specified anywhere.</p>
+
+          <p>This is not an abstract concern. Safety certification for industrial equipment in the United States typically involves demonstrating conformance to applicable standards, and the question of which standards apply to a humanoid robot is one that manufacturers and their customers are navigating largely on a case-by-case basis, in consultation with insurance providers and sometimes with OSHA directly. The absence of a consolidated standard specific to humanoid systems means that the burden of defining an adequate safety case falls on the deploying organisation, with limited regulatory guidance on what &ldquo;adequate&rdquo; means.</p>
+
+          <h2>The European Approach</h2>
+
+          <p>The European Union&rsquo;s regulatory position on robots is shaped by the Machinery Directive, a framework that governs the safety requirements for machinery placed on the EU market. A revised version, the Machinery Regulation, was adopted in 2023 and will apply from June 2027. The new regulation explicitly addresses autonomous and learning machinery for the first time, requiring manufacturers to conduct conformity assessments that account for changes in system behaviour resulting from machine learning &mdash; a provision that has direct relevance to humanoid robots whose behaviour evolves through continued training.</p>
+
+          <p>The EU AI Act, which entered into force in August 2024, adds a parallel layer. Robots used in occupational safety applications, or in contexts where decisions made by the AI system could affect the safety of workers, fall within the Act&rsquo;s high-risk AI category. High-risk AI systems must meet requirements around data quality, documentation, transparency, human oversight, accuracy, and robustness before deployment. The specific implications for humanoid robots are still being worked out through implementing regulations and guidance from the European AI Office, but the direction is clear: the EU intends humanoid systems operating in workplaces to be subject to formal conformity assessments, not just voluntary standards.</p>
+
+          <p>What the EU framework doesn&rsquo;t yet provide is sector-specific guidance on what those assessments should involve for bipedal mobile manipulators specifically. The Machinery Regulation and the AI Act establish the obligation; the detailed technical requirements that tell a manufacturer what tests to run and what evidence to submit are still being developed. European standards bodies, particularly CENELEC and CEN, are working on harmonised standards that will define the technical route to compliance, but finalised versions relevant to humanoid robots are likely still several years away.</p>
+
+          <h2>Public Spaces: A Different Problem Entirely</h2>
+
+          <p>The regulatory situation in controlled industrial settings, while incomplete, is at least built on existing frameworks that provide some structure. For humanoid robots operating in public or semi-public environments &mdash; retail spaces, hospitals, airports, residential facilities &mdash; the situation is considerably less defined.</p>
+
+          <p>In the United States, there is no federal regulatory framework governing the use of autonomous mobile robots in spaces accessible to the general public. Some states have enacted or are considering legislation addressing specific applications: California and several other states have considered bills related to autonomous delivery robots operating on public sidewalks, and some jurisdictions have enacted local ordinances. But these address wheeled delivery robots, not humanoid systems, and the coverage is patchy and inconsistent across jurisdictions.</p>
+
+          <p>For healthcare facilities, which represent one of the more active areas of humanoid robot exploration, the situation involves the Food and Drug Administration as well as OSHA. Medical devices are subject to FDA oversight, and the question of when a robot performing a task in a clinical setting constitutes a medical device &mdash; versus a piece of facility equipment that happens to be in a healthcare setting &mdash; is not settled. A robot that physically assists with patient repositioning is in a different regulatory category than one that transports supplies through hospital corridors, but the line between those categories is not always clear in practice, and manufacturers are in ongoing discussions with FDA about classification.</p>
+
+          <h2>Who Is Paying Attention</h2>
+
+          <p>There are signs that regulatory attention to humanoid robots specifically is increasing, even if binding rules remain sparse. OSHA published a request for information on AI and robotics in the workplace in 2024, inviting public comment on what regulatory gaps exist and what guidance would be most useful. The response from industry, labour organisations, and academics was substantial, and the agency has indicated it intends to develop more specific guidance, though the timeline is not fixed.</p>
+
+          <p>The National Institute of Standards and Technology has been developing measurement science and testing methodologies for mobile manipulation robots, work that feeds into both voluntary standards and eventual regulatory frameworks. IEEE has multiple active working groups on robot safety and ethics, including efforts specifically addressing humanoid systems. The International Federation of Robotics has been engaged in standards discussions in Geneva. None of this constitutes regulation, but it represents the groundwork on which regulation is eventually built.</p>
+
+          <p>What is notably absent is direct legislative action in most major jurisdictions. The EU is furthest along through the combination of the Machinery Regulation and the AI Act. In the United States, there has been no significant congressional action on workplace robot safety, and the regulatory agencies most relevant &mdash; OSHA, NIST, and potentially the Consumer Product Safety Commission for non-workplace settings &mdash; are working within existing authorities rather than new mandates.</p>
+
+          <h2>The Gap That Matters Most</h2>
+
+          <p>The regulatory gap that has the most immediate practical consequence is not the absence of rules about what humanoid robots are allowed to do &mdash; it is the absence of clear guidance on how to demonstrate that a given deployment is safe. Manufacturers and deploying organisations want to do the right thing, and most are conducting internal safety assessments, running controlled pilots, and consulting with insurers and regulators before scaling. But without a consolidated framework that specifies what evidence is sufficient to demonstrate safety for a bipedal mobile manipulator operating in proximity to people, every deployment involves a degree of improvisation.</p>
+
+          <p>That improvisation is manageable when deployments are small, tasks are narrow, and supervision is close &mdash; which describes most of what is actually happening with humanoid robots right now. As the technology matures and companies move toward larger-scale, less-supervised deployments in more varied environments, the absence of clear standards will become a more significant constraint. Not because regulators will necessarily block deployments, but because the liability exposure and insurance complexity of operating sophisticated autonomous systems without a settled compliance pathway creates friction that slows adoption in ways that are less visible than a regulatory prohibition but equally real in their effects. The companies that end up shaping those frameworks &mdash; through standards bodies, regulatory comment processes, and direct engagement with agencies &mdash; will have an outsized influence on where humanoid robots are actually allowed to go and what they are allowed to do once they get there.</p>
+
+        </article>
+
+        <aside class="article-sidebar">
+          <div class="sidebar-card">
+            <h3>More Analysis</h3>
+            <ul>
+              <li><a href="article-2026-07-31.html">The Memory Problem: What Humanoid Robots Know, Forget, and Have to Relearn</a></li>
+              <li><a href="article-2026-07-28.html">The Communication Problem: How Humanoid Robots Will Need to Work Alongside People</a></li>
+              <li><a href="article-2026-06-26.html">Who Is Liable When a Humanoid Robot Causes Harm?</a></li>
+              <li><a href="article-2026-07-14.html">No Standards, No Playbook: How Humanoid Robots Get Tested Before Deployment</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo">
+          <svg class="logo-icon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="17" cy="8" r="5" stroke="#00c8ff" stroke-width="1.8"/>
+            <rect x="11" y="14" width="12" height="10" rx="2" stroke="#00c8ff" stroke-width="1.8"/>
+            <line x1="8" y1="16" x2="5" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="26" y1="16" x2="29" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="14" y1="24" x2="12" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="20" y1="24" x2="22" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text"><span>Age of</span> Humanoids</span>
+        </a>
+        <p>Practical, grounded coverage of humanoid robotics &mdash; for people who want to understand what&#8217;s actually happening.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../about.html">About</a>
+        <a href="../resources.html">Resources</a>
+        <a href="../index.html#articles">Articles</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Age of Humanoids. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const siteNav = document.querySelector('.site-nav');
+  if (menuToggle && siteNav) {
+    menuToggle.addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+      siteNav.classList.toggle('nav-open');
+    });
+  }
+</script>
+
+</body>
+</html>

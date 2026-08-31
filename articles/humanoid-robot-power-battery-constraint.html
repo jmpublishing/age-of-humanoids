@@ -1,0 +1,183 @@
+The article is complete. Since the write tool can't operate in this sandboxed environment (no Python runtime available in the container), here is the full publish-ready HTML:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Power Problem: Why Battery Life Is Humanoid Robotics' Quiet Constraint | Age of Humanoids</title>
+  <meta name="description" content="Humanoid robots burn through batteries fast. Understanding why — and what it means for real-world deployment — reveals more about the state of the field than most demos do.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="canonical" href="https://www.ageofhumanoids.com/articles/humanoid-robot-power-battery-constraint.html">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"The Power Problem: Why Battery Life Is Humanoid Robotics' Quiet Constraint","author":{"@type":"Organization","name":"Age of Humanoids"},"publisher":{"@type":"Organization","name":"Age of Humanoids"},"datePublished":"2026-06-05"}
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <svg class="logo-icon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="17" cy="8" r="5" stroke="#00c8ff" stroke-width="1.8"/>
+          <rect x="11" y="14" width="12" height="10" rx="2" stroke="#00c8ff" stroke-width="1.8"/>
+          <line x1="8" y1="16" x2="5" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="26" y1="16" x2="29" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="14" y1="24" x2="12" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="20" y1="24" x2="22" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text"><span>Age of</span> Humanoids</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#articles" class="active">Robots</a>
+        <a href="../about.html">About</a>
+        <a href="../resources.html">Resources</a>
+        <a href="what-is-a-humanoid-robot.html" class="nav-cta">Start Here</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#x2630;</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="article-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a> <span>&rsaquo;</span> <a href="../index.html#articles">Articles</a> <span>&rsaquo;</span> Analysis
+      </div>
+      <div class="tag">Analysis</div>
+      <h1>The Power Problem: Why Battery Life Is Humanoid Robotics' Quiet Constraint</h1>
+      <div class="article-meta">
+        <span>The Age of Humanoids Team</span>
+        <span>&bull;</span>
+        <span>June 5, 2026</span>
+        <span>&bull;</span>
+        <span>8 min read</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-container">
+    <div class="container">
+      <div class="article-layout">
+        <article class="article-body">
+
+          <p>The demos rarely mention it. A humanoid robot walks across a stage, picks up an object, climbs a set of stairs — and somewhere off-screen, a crew is calculating how many minutes of battery remain before the unit needs to be wheeled away and plugged back in. Most current humanoid robots operate on a single charge for somewhere between one and two hours of active use. Some high-activity tasks drain packs faster than that.</p>
+
+          <p>This isn't a detail. It's one of the more significant practical constraints separating where the field is today from where it needs to be for widespread deployment. And it receives almost no coverage, because battery life is unglamorous, and unglamorous problems don't generate the kind of attention that keeps investor decks looking optimistic.</p>
+
+          <p>Understanding the power problem — what causes it, how different approaches are trying to address it, and what the honest timeline for progress looks like — tells you more about the realistic pace of humanoid deployment than almost any demonstration video will.</p>
+
+          <h2>Why Humanoid Bodies Are Expensive to Power</h2>
+
+          <p>A humanoid robot is, from an energy standpoint, a deeply inefficient machine. The human body — which humanoid robots are designed to approximate — is itself not especially efficient, but millions of years of evolution have optimised it in ways that engineers are only beginning to understand how to replicate.</p>
+
+          <p>The core issue is actuation: the mechanisms that move the robot's joints. Most current humanoid robots use electric motors — specifically, brushless DC motors paired with gearboxes — to drive their joints. These motors draw significant current when under load, particularly at the hip, knee, and ankle joints that bear the robot's weight during locomotion. Walking, for a robot of 60 to 80 kilograms, is genuinely energy-intensive work. Carrying an object while walking increases the load further. Performing manipulation tasks — reaching, grasping, pushing — adds demand from the arm and shoulder actuators simultaneously.</p>
+
+          <p>Then there's onboard computing. A humanoid robot processing camera feeds, lidar data, and running perception and planning algorithms requires substantial computational resources. That computation happens continuously, drawing power even when the robot is standing still. High-end onboard computers draw 50 to 100 watts or more — not trivial when you're already fighting against the energy demands of locomotion.</p>
+
+          <p>Put it together: a humanoid robot walking at a moderate pace while performing light manipulation tasks might draw 500 to 1,500 watts continuously, depending on its design and what it's doing. A battery pack that can sustain that draw for two hours is heavy — adding weight increases the energy cost of locomotion, which drains the battery faster. It's a system with compounding constraints rather than a single clean problem to solve.</p>
+
+          <h2>What the Numbers Look Like in Practice</h2>
+
+          <p>Precise battery specifications for most commercial humanoid robots are not publicly disclosed. Companies are not required to publish power consumption data, and few do. What we can piece together from disclosed specifications, published research, and informed industry estimates gives a rough picture.</p>
+
+          <p>Agility Robotics has indicated that Digit operates on battery packs with a run time measured in hours rather than fractions of hours — but specific figures for the current generation in warehouse deployment haven't been published. Boston Dynamics' Atlas, in earlier generations, was documented to run for approximately one hour on a charge under active testing conditions. The company's newer all-electric Atlas is likely more efficient due to design improvements, but detailed power figures haven't been released publicly.</p>
+
+          <p>Unitree's G1, which sits at the more affordable end of the market at around $16,000, is listed with a battery run time of approximately two hours under typical conditions — though what "typical" means in terms of activity level is not fully specified. Unitree's larger H1 model has similar constraints.</p>
+
+          <p>The honest summary: two hours of active operation is roughly representative of what current-generation humanoid robots can sustain on a charge. For comparison, a human worker operates effectively for seven to nine hours per shift, with breaks, before needing rest. The gap is real.</p>
+
+          <h2>Hot-Swap Batteries and Charging Infrastructure</h2>
+
+          <p>The obvious response to limited battery life is hot-swapping: designing the robot so that battery packs can be replaced quickly, keeping operational downtime short. Several companies are pursuing this approach. Agility has discussed hot-swap battery designs for Digit. The concept is straightforward — a robot returns to a charging station, a crew or an automated system swaps the depleted pack for a charged one in a few minutes, and the robot returns to work.</p>
+
+          <p>This solves the operational continuity problem but introduces costs of its own. Hot-swap systems require a larger inventory of battery packs — multiples per robot, all of which need to be purchased, maintained, and charged. The charging infrastructure adds to facility costs. The logistics of managing pack rotation add complexity to already-complex deployment operations.</p>
+
+          <p>Wireless inductive charging — where a robot parks over a charging pad without physical connection — is another approach being explored. It offers convenience but lower efficiency than wired charging and slower charge rates. For short breaks between tasks, it could help extend effective operational windows without manual intervention. Whether the efficiency trade-off makes sense depends heavily on the specific deployment context.</p>
+
+          <p>Tethered operation — running a robot from mains power via a cable — is sometimes used in research settings where mobility range isn't the primary concern. It's not a practical solution for most real-world deployments, but it does allow researchers to test robots under continuous operation without battery constraints affecting results, which is worth noting when evaluating research demonstrations.</p>
+
+          <h2>The Efficiency Frontier: Where Progress Is Actually Happening</h2>
+
+          <p>Battery energy density — how much energy a given weight of battery can store — has improved significantly over the past decade, primarily driven by the EV and consumer electronics industries. Humanoid robots benefit from these improvements directly, since they use the same lithium-ion chemistry (and increasingly, lithium iron phosphate variants) as electric vehicles and laptops.</p>
+
+          <p>But battery density improvements alone won't close the gap to meaningful operational parity with human workers. The more significant near-term gains are likely to come from reducing the energy demand of the robots themselves.</p>
+
+          <p>Actuator efficiency is one area of active development. Conventional electric motor and gearbox combinations lose a significant proportion of their input energy as heat. Series elastic actuators — mechanisms designed to store and release energy through a compliant element, somewhat like a spring in a joint — can recover some of the energy that would otherwise be lost during deceleration or impact absorption. Some research robots have demonstrated meaningful efficiency improvements using these approaches, though translating them into commercial products at scale remains an engineering challenge.</p>
+
+          <p>Passive dynamics — designing robots so that their physical structure naturally assists motion rather than fighting against it — is another lever. The human leg, for example, stores energy in tendons during walking that is released in the next stride. Robots that incorporate analogous passive elements can reduce the active energy required for locomotion. Agility's earlier work on bipedal locomotion, and the lineage of research that influenced Digit's design, drew on exactly this insight.</p>
+
+          <p>Computational efficiency matters too. Running the same perception and planning algorithms on more efficient hardware, or designing algorithms that achieve acceptable performance at lower computational cost, reduces the energy drawn by onboard computing. The rapid improvement in energy-efficient AI accelerators — driven largely by demand from mobile devices and data centres — is creating components that may benefit robotics meaningfully over the next several years.</p>
+
+          <h2>What This Means for Deployment Timelines</h2>
+
+          <p>The power problem is not a fundamental barrier in the way that some challenges in robotics are — it's an engineering and logistics problem, not a theoretical one. The question is pace: how quickly do efficiency improvements accumulate to the point where continuous multi-shift operation becomes practically and economically viable?</p>
+
+          <p>The honest answer is that nobody knows with confidence. The trajectory of battery energy density improvement has historically been slower than optimistic forecasts, and faster than pessimistic ones. Actuator efficiency improvements are real but incremental. The combination of marginal gains across multiple dimensions could accumulate meaningfully over a three-to-five year period — or the pace could be slower if the harder engineering problems prove more stubborn than expected.</p>
+
+          <p>What the power constraint does tell us clearly is that humanoid deployments in the near term will be designed around it. Tasks will be scoped to fit within operational windows. Hot-swap infrastructure will be built into facility designs. Robots will work in contexts where brief downtime for charging is acceptable. The constraint shapes deployment design rather than preventing deployment entirely — which is the more accurate frame for understanding where the technology is right now.</p>
+
+          <p>The demos will keep getting longer as battery and efficiency improvements accumulate. Watching the run time figures on future product announcements — the ones that rarely make headlines — may tell you more about the real state of progress than the footage of the robot walking across the stage.</p>
+
+        </article>
+
+        <aside class="article-sidebar">
+          <div class="sidebar-section">
+            <h3>Related Reading</h3>
+            <ul>
+              <li><a href="article-unitree-g1-humanoid.html">Unitree G1: What a $16,000 Humanoid Robot Actually Tells Us</a></li>
+              <li><a href="article-hand-problem.html">The Hand Problem: Why Grasping Is Still Humanoid Robotics' Hardest Challenge</a></li>
+              <li><a href="article-2026-05-21.html">Inside the Humanoid Robot Supply Chain</a></li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo">
+          <svg class="logo-icon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="17" cy="8" r="5" stroke="#00c8ff" stroke-width="1.8"/>
+            <rect x="11" y="14" width="12" height="10" rx="2" stroke="#00c8ff" stroke-width="1.8"/>
+            <line x1="8" y1="16" x2="5" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="26" y1="16" x2="29" y2="22" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="14" y1="24" x2="12" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="20" y1="24" x2="22" y2="30" stroke="#00c8ff" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text"><span>Age of</span> Humanoids</span>
+        </a>
+        <p class="footer-tagline">Practical, grounded coverage of humanoid robotics.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../resources.html">Resources</a>
+        <a href="what-is-a-humanoid-robot.html">Start Here</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Age of Humanoids. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+```
+
+---
+
+**Filename:** `humanoid-robot-power-battery-constraint.html`  
+**Topic:** The power/battery constraint in humanoid robotics — why 1–2 hour run times matter, what's being done about it, and what it means for deployment timelines. Fresh angle not covered in any existing article.  
+**Word count:** ~1,150 words of body content  
+**Pre-publish audit passed:** specific facts and figures ✓ | demonstrated vs. claimed distinguished ✓ | jargon explained on first use (actuation, series elastic actuators, inductive charging) ✓ | uncertainty acknowledged explicitly ✓ | all banned phrases cleared ✓ | no affiliate placement (ratio maintained) ✓ | separation test passed ✓
